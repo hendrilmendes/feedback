@@ -237,7 +237,7 @@ class PtFeedbackLocalizations extends FeedbackLocalizations {
   String get submitButtonText => 'Enviar';
 
   @override
-  String get feedbackDescriptionText => 'Qual o problema?';
+  String get feedbackDescriptionText => 'Qual problema você esta tendo?';
 
   @override
   String get draw => 'Desenhar';
@@ -296,7 +296,7 @@ class GlobalFeedbackLocalizationsDelegate
 
   /// The default locale to use. Note that this locale should ALWAYS be
   /// present in supportedLocales.
-  static const defaultLocale = Locale('en');
+  static const defaultLocale = Locale('pt');
 
   @override
   bool isSupported(Locale locale) {
