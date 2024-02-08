@@ -70,16 +70,29 @@ class _StringFeedbackState extends State<StringFeedback> {
                     style:
                         FeedbackTheme.of(context).bottomSheetDescriptionStyle,
                   ),
-                  TextField(
-                    style: FeedbackTheme.of(context).bottomSheetTextInputStyle,
-                    key: const Key('text_input_field'),
-                    maxLines: 2,
-                    minLines: 2,
-                    controller: controller,
-                    textInputAction: TextInputAction.done,
-                    onChanged: (_) {
-                      //print(_);
-                    },
+                  Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        style:
+                            FeedbackTheme.of(context).bottomSheetTextInputStyle,
+                        key: const Key('text_input_field'),
+                        maxLines: 2,
+                        minLines: 2,
+                        controller: controller,
+                        textInputAction: TextInputAction.done,
+                        decoration: InputDecoration(
+                          hintText: FeedbackLocalizations.of(context).hintText,
+                          border: InputBorder.none,
+                        ),
+                        onChanged: (_) {
+                          //print(_);
+                        },
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -88,7 +101,7 @@ class _StringFeedbackState extends State<StringFeedback> {
             ],
           ),
         ),
-        TextButton(
+        ElevatedButton(
           key: const Key('submit_feedback_button'),
           child: Text(
             FeedbackLocalizations.of(context).submitButtonText,

@@ -35,6 +35,9 @@ abstract class FeedbackLocalizations {
   /// the drawing mode is selected.
   String get draw;
 
+  // ignore: public_member_api_docs
+  String get hintText;
+
   /// This method is used to obtain a localized instance of
   /// [FeedbackLocalizations].
   static FeedbackLocalizations of(BuildContext context) {
@@ -64,6 +67,9 @@ class DeFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navigieren';
+
+  @override
+  String get hintText => 'Hier schreiben...';
 }
 
 /// Default english localization
@@ -82,6 +88,9 @@ class EnFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navigate';
+
+  @override
+  String get hintText => 'Write here...';
 }
 
 /// Default french localization
@@ -100,6 +109,9 @@ class FrFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Naviguer';
+
+  @override
+  String get hintText => 'Écrivez ici...';
 }
 
 /// Default arabic localization
@@ -118,6 +130,9 @@ class ArFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'إنتقال';
+
+  @override
+  String get hintText => '...اكتب هنا';
 }
 
 /// Default russian localization
@@ -136,6 +151,9 @@ class RuFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Навигация';
+
+  @override
+  String get hintText => 'Напишите здесь...';
 }
 
 /// Default swedish localization
@@ -154,6 +172,9 @@ class SvFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navigera';
+
+  @override
+  String get hintText => 'Skriv här...';
 }
 
 /// Default ukrainian localization
@@ -172,6 +193,9 @@ class UkFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Навігація';
+
+  @override
+  String get hintText => 'Напишіть тут...';
 }
 
 /// Default turkish localization
@@ -190,6 +214,9 @@ class TrFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Gezin';
+
+  @override
+  String get hintText => 'Buraya yaz...';
 }
 
 /// Default Simplified Chinese localization
@@ -208,6 +235,9 @@ class ZhFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => '导航';
+
+  @override
+  String get hintText => '写在这里...';
 }
 
 /// Default polish localization
@@ -226,6 +256,9 @@ class PlFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Nawiguj';
+
+  @override
+  String get hintText => 'Napisz tutaj...';
 }
 
 /// Default portuguese localization
@@ -244,6 +277,9 @@ class PtFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navegar';
+
+  @override
+  String get hintText => 'Escreva aqui...';
 }
 
 /// Default japanese localization
@@ -262,6 +298,9 @@ class JaFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'ナビゲート';
+
+  @override
+  String get hintText => 'ここに書いてください..';
 }
 
 // coverage:ignore-end
