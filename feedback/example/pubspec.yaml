@@ -6,11 +6,10 @@ publish_to: none
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.10.0'
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
-  cupertino_icons: ^1.0.3
+  cupertino_icons: ^1.0.6
   feedback:
     path: ../../feedback
   flutter:
@@ -18,11 +17,11 @@ dependencies:
   flutter_email_sender: ^6.0.2
   flutter_localizations:
     sdk: flutter
-  flutter_markdown: ^0.6.18
-  http: ^1.0.0
+  flutter_markdown: ^0.6.21
+  http: ^1.2.0
   path_provider: ^2.1.1
-  share_plus: ^7.2.1
-  url_launcher: ^6.1.14
+  share_plus: ^7.2.2
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   flutter_lints: ^3.0.0
