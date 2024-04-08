@@ -18,13 +18,13 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_markdown: ^0.6.21
-  http: ^1.2.0
+  http: ^1.2.1
   path_provider: ^2.1.1
-  share_plus: ^7.2.2
+  share_plus: ^8.0.3
   url_launcher: ^6.2.5
 
 dev_dependencies:
-  flutter_lints: ^3.0.0
+  flutter_lints: ^3.0.2
   flutter_test:
     sdk: flutter
 
