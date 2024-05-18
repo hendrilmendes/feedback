@@ -6,13 +6,13 @@ repository: https://github.com/ueman/feedback
 issue_tracker: https://github.com/ueman/feedback/issues
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.4.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
   feedback: ^3.0.0
-  sentry: ^7.17.0
+  sentry: ^8.2.0
 
 dev_dependencies:
   flutter_test:
