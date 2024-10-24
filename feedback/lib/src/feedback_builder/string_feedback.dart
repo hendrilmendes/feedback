@@ -84,10 +84,6 @@ class _StringFeedbackState extends State<StringFeedback> {
                         minLines: 2,
                         controller: controller,
                         textInputAction: TextInputAction.done,
-                        decoration: InputDecoration(
-                          hintText: FeedbackLocalizations.of(context).hintText,
-                          border: InputBorder.none,
-                        ),
                         onChanged: (_) {
                           //print(_);
                         },
