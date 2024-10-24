@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:feedback/src/feedback_mode.dart';
+import 'package:feedback/src/l18n/translation.dart';
 import 'package:feedback/src/theme/feedback_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -63,12 +64,7 @@ class ControlsColumn extends StatelessWidget {
                   : () => onControlModeChanged(FeedbackMode.navigate),
               disabledTextColor:
                   FeedbackTheme.of(context).activeFeedbackModeColor,
-              child: Icon(
-                Icons.navigation,
-                color: isNavigatingActive
-                    ? FeedbackTheme.of(context).activeFeedbackModeColor
-                    : Colors.blue,
-              ),
+              child: Text(FeedbackLocalizations.of(context).navigate),
             ),
           ),
           _ColumnDivider(),
@@ -78,16 +74,11 @@ class ControlsColumn extends StatelessWidget {
               key: const ValueKey<String>('draw_button'),
               minWidth: 20,
               onPressed: isNavigatingActive
-                  ? null
-                  : () => onControlModeChanged(FeedbackMode.draw),
+                  ? () => onControlModeChanged(FeedbackMode.draw)
+                  : null,
               disabledTextColor:
                   FeedbackTheme.of(context).activeFeedbackModeColor,
-              child: Icon(
-                Icons.draw,
-                color: isNavigatingActive
-                    ? FeedbackTheme.of(context).activeFeedbackModeColor
-                    : Colors.blue,
-              ),
+              child: Text(FeedbackLocalizations.of(context).draw),
             ),
           ),
           IconButton(
