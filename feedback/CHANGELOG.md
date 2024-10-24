@@ -1,3 +1,11 @@
+## [3.1.0]
+
+- Fix dialog pop issue [#293](https://github.com/ueman/feedback/pull/293). This may break custom feedback builder. Make sure to test those before updating.
+
+## [3.0.1]
+
+* Theme is now able to configure more UI elements
+
 ## [3.0.0]
 
 * Require Flutter 3.10.0

@@ -35,9 +35,6 @@ abstract class FeedbackLocalizations {
   /// the drawing mode is selected.
   String get draw;
 
-  // ignore: public_member_api_docs
-  String get hintText;
-
   /// This method is used to obtain a localized instance of
   /// [FeedbackLocalizations].
   static FeedbackLocalizations of(BuildContext context) {
@@ -67,9 +64,6 @@ class DeFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navigieren';
-
-  @override
-  String get hintText => 'Hier schreiben...';
 }
 
 /// Default english localization
@@ -88,9 +82,24 @@ class EnFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navigate';
+}
+
+/// Default persian localization
+class FaFeedbackLocalizations extends FeedbackLocalizations {
+  /// Creates a [FaFeedbackLocalizations].
+  const FaFeedbackLocalizations();
 
   @override
-  String get hintText => 'Write here...';
+  String get submitButtonText => 'تایید';
+
+  @override
+  String get feedbackDescriptionText => 'چه مشکلی پیش آمده ؟';
+
+  @override
+  String get draw => 'رسم';
+
+  @override
+  String get navigate => 'پیمایش';
 }
 
 /// Default french localization
@@ -109,9 +118,6 @@ class FrFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Naviguer';
-
-  @override
-  String get hintText => 'Écrivez ici...';
 }
 
 /// Default arabic localization
@@ -130,9 +136,6 @@ class ArFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'إنتقال';
-
-  @override
-  String get hintText => '...اكتب هنا';
 }
 
 /// Default russian localization
@@ -151,9 +154,6 @@ class RuFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Навигация';
-
-  @override
-  String get hintText => 'Напишите здесь...';
 }
 
 /// Default swedish localization
@@ -172,9 +172,6 @@ class SvFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Navigera';
-
-  @override
-  String get hintText => 'Skriv här...';
 }
 
 /// Default ukrainian localization
@@ -193,9 +190,6 @@ class UkFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Навігація';
-
-  @override
-  String get hintText => 'Напишіть тут...';
 }
 
 /// Default turkish localization
@@ -214,9 +208,6 @@ class TrFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Gezin';
-
-  @override
-  String get hintText => 'Buraya yaz...';
 }
 
 /// Default Simplified Chinese localization
@@ -235,9 +226,6 @@ class ZhFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => '导航';
-
-  @override
-  String get hintText => '写在这里...';
 }
 
 /// Default polish localization
@@ -256,9 +244,6 @@ class PlFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'Nawiguj';
-
-  @override
-  String get hintText => 'Napisz tutaj...';
 }
 
 /// Default portuguese localization
@@ -270,16 +255,13 @@ class PtFeedbackLocalizations extends FeedbackLocalizations {
   String get submitButtonText => 'Enviar';
 
   @override
-  String get feedbackDescriptionText => 'Qual problema você esta tendo?';
+  String get feedbackDescriptionText => 'Qual o problema?';
 
   @override
   String get draw => 'Desenhar';
 
   @override
   String get navigate => 'Navegar';
-
-  @override
-  String get hintText => 'Escreva aqui...';
 }
 
 /// Default japanese localization
@@ -298,9 +280,60 @@ class JaFeedbackLocalizations extends FeedbackLocalizations {
 
   @override
   String get navigate => 'ナビゲート';
+}
+
+/// Default greek localization
+class ElFeedbackLocalizations extends FeedbackLocalizations {
+  /// Creates a [ElFeedbackLocalizations]
+  const ElFeedbackLocalizations();
 
   @override
-  String get hintText => 'ここに書いてください..';
+  String get submitButtonText => 'Υποβολή';
+
+  @override
+  String get feedbackDescriptionText => 'Τι πρόβλημα υπάρχει;';
+
+  @override
+  String get draw => 'Σχεδίαση';
+
+  @override
+  String get navigate => 'Πλοήγηση';
+}
+
+/// Default bulgarian localization
+class BgFeedbackLocalizations extends FeedbackLocalizations {
+  /// Creates a [BgFeedbackLocalizations]
+  const BgFeedbackLocalizations();
+
+  @override
+  String get submitButtonText => 'Подчинение';
+
+  @override
+  String get feedbackDescriptionText => 'текст на описанието';
+
+  @override
+  String get draw => 'Нарисувай';
+
+  @override
+  String get navigate => 'Навигиране';
+}
+
+/// Default spanish localization
+class EsFeedbackLocalizations extends FeedbackLocalizations {
+  /// Creates a [EsFeedbackLocalizations]
+  const EsFeedbackLocalizations();
+
+  @override
+  String get submitButtonText => 'Enviar';
+
+  @override
+  String get feedbackDescriptionText => '¿Cuál es el problema?';
+
+  @override
+  String get draw => 'Dibujar';
+
+  @override
+  String get navigate => 'Navegar';
 }
 
 // coverage:ignore-end
@@ -331,11 +364,15 @@ class GlobalFeedbackLocalizationsDelegate
     const Locale('pl'): const PlFeedbackLocalizations(),
     const Locale('pt'): const PtFeedbackLocalizations(),
     const Locale('ja'): const JaFeedbackLocalizations(),
+    const Locale('el'): const ElFeedbackLocalizations(),
+    const Locale('bg'): const BgFeedbackLocalizations(),
+    const Locale('es'): const EsFeedbackLocalizations(),
+    const Locale('fa'): const FaFeedbackLocalizations(),
   };
 
   /// The default locale to use. Note that this locale should ALWAYS be
   /// present in supportedLocales.
-  static const defaultLocale = Locale('pt');
+  static const defaultLocale = Locale('en');
 
   @override
   bool isSupported(Locale locale) {
